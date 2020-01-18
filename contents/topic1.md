@@ -3,8 +3,4 @@
   siteNav: site-nav.md
 </frontmatter>
 
-<br>
-
-# Topic 1
-
-> More content to be added
+<include src="fileToBeIncluded.md">
