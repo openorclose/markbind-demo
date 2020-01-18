@@ -57,7 +57,7 @@ value2   | y        | 20       | :far-thumbs-down:
 
 **Media embeds:**
 
-@[youtube](http://www.youtube.com/watch?v=v40b3ExbM0c)
+@[youtube](https://www.youtube.com/watch?v=ttrNjqT9KJc)
 
 **Tabs:**
 
@@ -126,3 +126,11 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 </panel>
 
 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+<box type="success">
+    success
+</box>
+
+<box type="success" light>
+    success
+</box>
