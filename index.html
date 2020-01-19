@@ -25,14 +25,8 @@
   <div id="app">
     <header>
       <navbar type="dark" class="temp-navbar">
-        <a slot="brand" href="/index.html" title="Home" class="navbar-brand">Your Logo</a>
-        <li><a href="/contents/topic1.html" class="nav-link">Topic 1</a></li>
-        <li><a href="/contents/topic2.html" class="nav-link">Topic 2</a></li>
-        <div class="nav-link temp-dropdown-placeholder">Topic 3</div>
-        <dropdown text="Topic 3" class="nav-link temp-dropdown">
-          <li><a href="/contents/topic3a.html" class="dropdown-item">Topic 3a</a></li>
-          <li><a href="/contents/topic3b.html" class="dropdown-item">Topic 3b</a></li>
-        </dropdown>
+        <a slot="brand" href="/index.html" title="Home" class="navbar-brand">MarkBind</a>
+        <li><a href="/contents/topic1.html" class="nav-link">PUML</a></li>
         <li slot="right">
           <form class="navbar-form">
             <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
@@ -45,18 +39,7 @@
         <div class="border-right-grey nav-inner position-sticky slim-scroll">
           <ul class="px-0 site-nav-list">
             <li class="mt-2"><a href="/index.html" class="site-nav__a current">Home 🏠</a></li>
-            <li class="mt-2"><a href="/contents/topic1.html" class="site-nav__a">Topic 1</a></li>
-            <li class="mt-2"><a href="/contents/topic2.html" class="site-nav__a">Topic 2</a></li>
-            <li class="mt-2"><button class="dropdown-btn dropdown-btn-open">Topic 3 
- <i class="dropdown-btn-icon rotate-icon">
-<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
-              <div class="dropdown-container dropdown-container-open">
-                <ul class="pl-3 site-nav-list">
-                  <li class="mt-2"><a href="/contents/topic3a.html" class="site-nav__a">Topic 3a</a></li>
-                  <li class="mt-2"><a href="/contents/topic3b.html" class="site-nav__a">Topic 3b</a></li>
-                </ul>
-              </div>
-            </li>
+            <li class="mt-2"><a href="/contents/PUML.html" class="site-nav__a">PUML</a></li>
           </ul>
         </div>
       </nav>
@@ -64,71 +47,137 @@
         <br>
         <div class="jumbotron jumbotron-fluid bg-primary text-white">
           <div class="container">
-            <h1 class="display-4">Landing Page Title</h1>
-            <p class="lead">A tagline can go here</p>
+            <h1 class="display-4">MarkBind</h1>
+            <p class="lead">Generate more dynamic websites from Markdown text</p>
           </div>
         </div>
-        <h1 id="heading-1">Heading 1<a class="fa fa-anchor" href="#heading-1"></a></h1>
-        <p>Some text some text some text some text some text some text some text. <strong>Some text some text some text some text some text <mark>some text</mark> some text</strong>. Some text some text some text some text some text some text some text some
-          text some text some text some text some text some text some text. Some text some text some text some text some text some text. Some text some text some text some text some text some text some text.</p>
-        <p><strong>A block quote:</strong></p>
-        <blockquote>
-          <p>Some text some text some text some text some text some text some text. Some text some text some text some text some text some text some text. Some text some text some text some text some text some text some text some text some text some text
-            some text some text some text some text. Some text some text some text some text some text some text. Some text some text some text some text some text some text some text.</p>
-        </blockquote>
-        <p><strong>A list:</strong></p>
-        <ul>
-          <li>item A</li>
-          <li>item B
-            <ol>
-              <li>item b1</li>
-              <li>item b2</li>
-              <li>item b3</li>
-            </ol>
-          </li>
-        </ul>
-        <p><strong>A <code>code</code> example:</strong></p>
-        <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">foo</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">bar</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"name"</span>&gt;</span>goo<span class="hljs-tag">&lt;/<span class="hljs-name">bar</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">foo</span>&gt;</span>
-</code></pre>
-        <h2 id="sub-heading-1-1">Sub Heading 1.1<a class="fa fa-anchor" href="#sub-heading-1-1"></a></h2>
-        <p>A
-          <tooltip effect="scale" content=":exclamation: some **important explanation**" placement="top" trigger="hover">tooltip</tooltip>, a
-          <trigger for="modal:modalinfo" trigger="click">modal</trigger>, a <a href="https://markbind.org/">link</a>, a <span class="badge badge-danger">badge</span>, another <span class="badge badge-warning">badge</span>.</p>
-        <modal title="Modal Title" id="modal:modalinfo">
-          Some text some text some text some text some text some text some text. Some text some text some text some text some text some text some text. Some text some text some text some text some text some text some text some text some text some text some text
-          some text some text some text. Some text some text some text some text some text some text. Some text some text some text some text some text some text some text.
-        </modal>
-        <p><strong>A table:</strong></p>
+        <h1 id="welcome-to-markbind">Welcome to MarkBind<a class="fa fa-anchor" href="#welcome-to-markbind"></a></h1>
+        <p>MarkBind source files can be as simple as basic Markdown, but you can also <a href="https://markbind.org/userGuide/markBindSyntax.html"><strong>use a mix of several popular syntax schemes</strong></a> (
+          <tooltip content="GitHub Flavored Markdown">GFMD</tooltip>, BootStrap, NunJucks, etc. as well as MarkBind's own custom syntax) to create more dynamic content that you cannot normally get from a typical markdown-to-html site generator.</p>
+        <p>Here are some simple text-formatting examples:</p>
         <div class="table-responsive">
           <table class="markbind-table table table-bordered table-striped">
             <thead>
               <tr>
-                <th style="text-align:center">Column 1</th>
-                <th style="text-align:center">Column 2</th>
-                <th style="text-align:center">Column 3</th>
-                <th><span aria-hidden="true" class="far fa-thumbs-up"></span> / <span aria-hidden="true" class="far fa-thumbs-down"></span>?</th>
+                <th>Syntax scheme</th>
+                <th>Code</th>
+                <th>Output</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td style="text-align:center">value1</td>
-                <td style="text-align:center">x</td>
-                <td style="text-align:center">5</td>
-                <td><span aria-hidden="true" class="far fa-thumbs-up"></span></td>
+                <td>Markdown</td>
+                <td><code>**bold text** _italic text_</code></td>
+                <td><strong>bold text</strong> <em>italic text</em></td>
               </tr>
               <tr>
-                <td style="text-align:center">value2</td>
-                <td style="text-align:center">y</td>
-                <td style="text-align:center">20</td>
-                <td><span aria-hidden="true" class="far fa-thumbs-down"></span></td>
+                <td>GFMD</td>
+                <td><code>~~striked out text~~</code></td>
+                <td><s>striked out text</s></td>
+              </tr>
+              <tr>
+                <td>MarkBind extensions to Markdown</td>
+                <td><code>==highlighted text==</code><br><code>%%grey text%%</code><br><code>++underlined text++</code></td>
+                <td><mark>highlighted text</mark><br><span class="dimmed">grey text</span><br><ins>underlined text</ins></td>
               </tr>
             </tbody>
           </table>
         </div>
-        <h2 id="sub-heading-1-2">Sub Heading 1.2<a class="fa fa-anchor" href="#sub-heading-1-2"></a></h2>
-        <p><strong>Media embeds:</strong></p>
+        <p>
+          <box type="info"> This is the website we made specially for the demo. </box>
+        </p>
+        <p><strong>What our demo includes:</strong></p>
+        <ul>
+          <li>An understanding of <code>markbind init</code>, <code>markbind build</code>, and <code>markbind serve</code> commands</li>
+          <li>Live coding. We'll show you just how easy it is to work with MarkBind components and other syntax like -
+            <ol>
+              <li>Panels</li>
+              <li>Embedding media</li>
+              <li>Using <code>&lt;include/&gt;</code>, our killer feature</li>
+              <li>PUML diagrams</li>
+            </ol>
+          </li>
+          <li>Working with plugins</li>
+          <li>Subsites - what are they and how do I create one?</li>
+          <li>Syntax you can use to create awesome websites</li>
+          <li>Deploying your website</li>
+        </ul>
+        <h2 id="real-world-examples">Real-world examples<a class="fa fa-anchor" href="#real-world-examples"></a></h2>
+        <p><strong>Here's an extract from the CS2103/T website-</strong></p>
+        <p>Given below is a summary of what the module CS2103/T covers and does not cover.</p>
+        <div class="table-responsive">
+          <table class="markbind-table table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Topic</th>
+                <th>Covered</th>
+                <th>Not covered</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Java</td>
+                <td>Used heavily, but not taught</td>
+                <td>syntax <span class="dimmed">(reason: expected prerequisite knowledge)</span></td>
+              </tr>
+              <tr>
+                <td>OOP</td>
+                <td>Used in a non-trivial project,
+                  <tooltip content="e.g., Single Responsibility Principle, Open-Closed Principle">intermediate OOP principles</tooltip>
+                </td>
+                <td>basics <span class="dimmed">(reason: expected prerequisite knowledge)</span></td>
+              </tr>
+              <tr>
+                <td>SE tools/practices</td>
+                <td>
+                  <tooltip content="e.g., revision control, continuous integration, practices, test automation, code reviews, pull requests">those typically used in a mature, high-rigor SE project</tooltip>
+                </td>
+                <td>those specific to start-ups</td>
+              </tr>
+              <tr>
+                <td>Modeling</td>
+                <td>
+                  <tooltip content="e.g., class diagrams, sequence diagrams, activity diagrams">Some UML notations</tooltip> (sufficient to be able to describe SE artifacts using models, such as seen in <a href="https://se-edu.github.io/addressbook-level3/DeveloperGuide.html#design">this Developer Guide of AB3</a>)</td>
+                <td>intensive
+                  <tooltip content="creating detailed UML models before strating to code">upfront design modeling</tooltip>
+                </td>
+              </tr>
+              <tr>
+                <td>Requirements</td>
+                <td>
+                  <tooltip content="e.g., user stories, use cases">Some lightweight techniques</tooltip> to gather and document project requirements</td>
+                <td>rapid prototyping, heavy UI design, designing a product from scratch</td>
+              </tr>
+              <tr>
+                <td>Documentation</td>
+                <td>Documentation targeting end users (<a href="https://se-edu.github.io/addressbook-level3/UserGuide.html">example</a>) as well as those targeting developers (<a href="https://se-edu.github.io/addressbook-level3/DeveloperGuide.html">example</a>)</td>
+                <td>Marketing materials</td>
+              </tr>
+              <tr>
+                <td>Project Management</td>
+                <td>Iterative delivery of a product, working collaboratively with team members, on-site as well as remotely</td>
+                <td>Setting up project infrastructure from scratch</td>
+              </tr>
+              <tr>
+                <td>Testing</td>
+                <td>
+                  <tooltip content="e.g., automated unit/integration/system testing">basic developer testing</tooltip> and
+                  <tooltip content="e.g., acceptance testing">user testing</tooltip>
+                </td>
+                <td>
+                  <tooltip content="e.g., security testing, performance testing, usability testing">testing for non-functional aspects</tooltip>
+                </td>
+              </tr>
+              <tr>
+                <td>Applications domains</td>
+                <td>Cross-platform desktop applications</td>
+                <td>Web programming, Mobile programming, Database programming</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h2 id="media-embeds">Media Embeds<a class="fa fa-anchor" href="#media-embeds"></a></h2>
+        <p><strong>Video embed:</strong></p>
         <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/ttrNjqT9KJc" frameborder="0" width="640" height="390" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen></iframe></div>
         <p><strong>Tabs:</strong></p>
         <tabs>
@@ -149,7 +198,7 @@
           </tab-group>
         </tabs>
         <br>
-        <h1 id="heading-2">Heading 2<a class="fa fa-anchor" href="#heading-2"></a></h1>
+        <h1 id="showcasing-our-boxes">Showcasing our boxes<a class="fa fa-anchor" href="#showcasing-our-boxes"></a></h1>
         <p><strong>Some boxes:</strong></p>
         <box>
           default
@@ -173,18 +222,19 @@
           in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </box>
         <br>
-        <h1 id="heading-3">Heading 3<a class="fa fa-anchor" href="#heading-3"></a></h1>
-        <panel header="Expandable panel" type="info">
-          Some text some text some text some text some text some text some text. Some text some text some text some text some text some text some text. Some text some text some text some text some text some text some text some text some text some text some text
-          some text some text some text. Some text some text some text some text some text some text. Some text some text some text some text some text some text some text.
-        </panel>
-        <br>
-        <panel header="Expanded panel" alt="Minimized panel" type="success" minimized="">
-          ...
-        </panel>
-        <br>
-        <panel header="Expanded panel" alt="Minimized panel" type="seamless">
-          ...
+        <h1 id="showcasing-our-panels-killer-feature">Showcasing our panels (killer feature)<a class="fa fa-anchor" href="#showcasing-our-panels-killer-feature"></a></h1>
+        <panel header="Click here to learn about primitive data types" type="info">
+          <ul>
+            <li>Boolean, true or false.</li>
+            <li>Character</li>
+            <li>Floating-point, single-precision real number values.</li>
+            <li>Double, a wider floating-point size.</li>
+            <li>Integer, integral or fixed-precision values.</li>
+            <li>String, a sequence of characters.</li>
+            <li>Reference (also called a pointer or handle), a small value referring to another object's address in memory, possibly a much larger one.</li>
+            <li>Enumerated type, a small set of uniquely named values.</li>
+          </ul>
+          <p><span class="dimmed"><sub>[source:wikipedia]</sub></span></p>
         </panel>
         <br>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -194,23 +244,20 @@
         </p>
         <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <box type="success">
-          success
-        </box>
-        <box type="success" light="">
-          success
+          That's all, folks!!!
         </box>
       </div>
       <nav id="page-nav" class="navbar navbar-light bg-transparent">
         <div class="border-left-grey nav-inner position-sticky slim-scroll">
           <a class="navbar-brand page-nav-title" href="#">Chapters of This Page</a>
           <nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
-            <a class="nav-link py-1" href="#heading-1">Heading 1&#x200E;</a>
+            <a class="nav-link py-1" href="#welcome-to-markbind">Welcome to MarkBind&#x200E;</a>
             <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
-              <a class="nav-link py-1" href="#sub-heading-1-1">Sub Heading 1.1&#x200E;</a>
-              <a class="nav-link py-1" href="#sub-heading-1-2">Sub Heading 1.2&#x200E;</a>
+              <a class="nav-link py-1" href="#real-world-examples">Real-world examples&#x200E;</a>
+              <a class="nav-link py-1" href="#media-embeds">Media Embeds&#x200E;</a>
             </nav>
-            <a class="nav-link py-1" href="#heading-2">Heading 2&#x200E;</a>
-            <a class="nav-link py-1" href="#heading-3">Heading 3&#x200E;</a>
+            <a class="nav-link py-1" href="#showcasing-our-boxes">Showcasing our boxes&#x200E;</a>
+            <a class="nav-link py-1" href="#showcasing-our-panels-killer-feature">Showcasing our panels (killer feature)&#x200E;</a>
 
           </nav>
         </div>

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="MarkBind 2.9.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
+  <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../markbind/css/markbind.css">
+  <link rel="stylesheet" href="../markbind/layouts/default/styles.css">
+
+
+
+
+</head>
+
+<body>
+  <div id="app">
+    <div id="flex-body">
+      <div id="content-wrapper">
+        <h1 id="project-duke">Project Duke<a class="fa fa-anchor" href="#project-duke"></a></h1>
+        <div class="lead">
+          <pic add-class="float-left border mr-2 mt-2 p1 bg-white" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Duke_%28Java_mascot%29_waving.svg/226px-Duke_%28Java_mascot%29_waving.svg.png" width="60">
+            <p><small><small><strong>Duke</strong>, the Java Mascot<br>[<a href="https://en.wikipedia.org/wiki/File:Duke_(Java_mascot)_waving.svg">credit: Wikipedia</a>]</small></small>
+            </p>
+          </pic>
+          <p><strong>Project Duke is a educational software project designed to take you through the steps of building a small software <em>incrementally</em></strong>, while applying as many Java and SE techniques as possible along the way.</p>
+        </div>
+        <p><strong>The project aims to build a product named <em>Duke</em>, a Personal Assistant Chatbot that helps a person to keep track of various things.</strong> <span class="dimmed">The name <em>Duke</em> was chosen as a placeholder name, in honor of <a href="https://www.oracle.com/java/duke.html">Duke, the Java Mascot</a>.</span>          <strong>You may give it any other name or personality you wish.</strong></p>
+        <p>Here is a sample interaction with Duke:</p>
+        <pre><code class="hljs">    ____________________________________________________________
+      ____        _        
+     |  _ \ _   _| | _____ 
+     | | | | | | | |/ / _ \
+     | |_| | |_| |   &lt;  __/
+     |____/ \__,_|_|\_\___|
+
+     Hello! I'm Duke
+     What can I do for you?
+    ____________________________________________________________
+
+list
+    ____________________________________________________________
+     Here are the tasks in your list:
+     1.[T][✓] read book
+     2.[D][✗] return book (by: June 6th)
+     3.[E][✗] project meeting (at: Aug 6th 2-4pm)
+     4.[T][✓] join sports club
+    ____________________________________________________________
+
+todo borrow book
+    ____________________________________________________________
+     Got it. I've added this task: 
+       [T][✗] borrow book
+     Now you have 5 tasks in the list.
+    ____________________________________________________________
+
+
+deadline return book /by Sunday
+    ____________________________________________________________
+     Got it. I've added this task: 
+       [D][✗] return book (by: Sunday)
+     Now you have 6 tasks in the list.
+    ____________________________________________________________
+
+done 2
+    ____________________________________________________________
+     Nice! I've marked this task as done: 
+       [D][✓] return book (by: June 6th)
+    ____________________________________________________________
+
+blah
+    ____________________________________________________________
+     ☹ OOPS!!! I'm sorry, but I don't know what that means :-(
+    ____________________________________________________________
+
+bye
+    ____________________________________________________________
+     Bye. Hope to see you again soon!
+    ____________________________________________________________
+
+</code></pre>
+        <div id="increments_summary">
+          <p>The project consists of the following <em>increments</em>:</p>
+          <ul>
+            <li><strong>Levels</strong>: A series of features, meant to be added to Duke in the given order, although some can be skipped. These have been named <code>Level 1</code> to <code>Level 10</code> to indicate how the features make the product progressively
+              &quot;level up&quot;.</li>
+            <li><strong>Extensions:</strong>
+              <ul>
+                <li><big><span class="badge badge-pill badge-primary">Category A</span></big> These are internal/feature enhancements meant to help you practice a specific Java or an SE technique.</li>
+                <li><big><span class="badge badge-pill badge-info">Category B</span></big> These are enhancements related to task tracking.</li>
+                <li><big><span class="badge badge-pill badge-success">Category C</span></big> These are enhancements, not specifically related to task tracking.</li>
+                <li><big><span class="badge badge-pill badge-danger">Category D</span></big> Each of these adds the ability to track another type of entities.</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <h2 id="levels">
+          <div class="text-white bg-dark p-1">Levels</div><a class="fa fa-anchor" href="#levels"></a></h2>
+        <div id="level1">
+          <p>
+            <thumbnail text=":fas-comments:" font-color="white" add-class="float-left bg-dark mr-2 mt-2" size="80"><span aria-hidden="true" class="fas fa-comments"></span></thumbnail>
+          </p>
+          <h3 id="level-1-greet-echo-exit">Level 1. Greet, Echo, Exit<a class="fa fa-anchor" href="#level-1-greet-echo-exit"></a></h3>
+          <p>In this initial <em>skeletal</em> version of Duke, it starts by greeting the user, simply echos commands entered by the user, and exits when the user types <code>bye</code>.
+            <br> Example:
+          </p>
+          <pre><code class="hljs">    ____________________________________________________________
+     Hello! I'm Duke
+     What can I do for you?
+    ____________________________________________________________
+
+list
+    ____________________________________________________________
+     list
+    ____________________________________________________________
+
+blah
+    ____________________________________________________________
+     blah
+    ____________________________________________________________
+
+bye
+    ____________________________________________________________
+     Bye. Hope to see you again soon!
+    ____________________________________________________________
+
+</code></pre>
+          <ul>
+            <li>The indentation and horizontal lines are optional.</li>
+          </ul>
+        </div>
+        <hr>
+        <div id="level2">
+          <p>
+            <thumbnail text=":fas-list:" font-color="white" add-class="float-left bg-dark mr-2 mt-2" size="80"><span aria-hidden="true" class="fas fa-list"></span></thumbnail>
+          </p>
+          <h3 id="level-2-add-list">Level 2. Add, List<a class="fa fa-anchor" href="#level-2-add-list"></a></h3>
+          <p>Add the ability to store whatever text entered by the user and display them back to the user when requested.</p>
+          <p>Example:</p>
+          <pre><code class="hljs">    ____________________________________________________________
+     Hello! I'm Duke
+     What can I do for you?
+    ____________________________________________________________
+
+read book
+    ____________________________________________________________
+     added: read book
+    ____________________________________________________________
+
+return book
+    ____________________________________________________________
+     added: return book
+    ____________________________________________________________
+
+list
+    ____________________________________________________________
+     1. read book
+     2. return book
+    ____________________________________________________________
+bye
+    ____________________________________________________________
+     Bye. Hope to see you again soon!
+    ____________________________________________________________
+
+</code></pre>
+          <ul>
+            <li>There is no need to save the data to the hard disk.</li>
+            <li>Assume there will be no more than 100 tasks. If you wish, you may use a fixed size array (e.g., <code>String[100]</code>) to store the items.</li>
+          </ul>
+        </div>
+        <hr>
+        <div id="level3">
+          <p>
+            <thumbnail text=":fas-check:" font-color="white" add-class="float-left bg-dark mr-2 mt-2" size="80"><span aria-hidden="true" class="fas fa-check"></span></thumbnail>
+          </p>
+          <h3 id="level-3-mark-as-done">Level 3. Mark as Done<a class="fa fa-anchor" href="#level-3-mark-as-done"></a></h3>
+          <p>Add the ability to mark tasks as <em>done</em>.<br><br></p>
+          <pre><code class="hljs">list
+    ____________________________________________________________
+     Here are the tasks in your list:
+     1.[✓] read book
+     2.[✗] return book
+     3.[✗] buy bread
+    ____________________________________________________________
+
+done 2
+    ____________________________________________________________
+     Nice! I've marked this task as done: 
+       [✓] return book
+    ____________________________________________________________
+</code></pre>
+          <p>When implementing this feature, you are also recommended to implement the following extension as collections classes (e.g., <code>ArrayList</code>) have methods to easily delete an item at a specified location:</p>
+          <panel header="**Extension: `A-Classes`**">
+            <h3 id="a-classes"><span class="badge badge-pill badge-primary">A-Classes</span><a class="fa fa-anchor" href="#a-classes"></a></h3>
+            <p><strong>Use a class to represent tasks</strong></p>
+            <p>While it is possible to represent a task list as a multi-dimensional array containing
+              <tooltip content="`String`, `int`, `boolean` etc.">primitive values</tooltip>, the more natural approach is to use a <code>Task</code> class to represent tasks.</p>
+            <panel type="seamless" header="Partial solution" minimized="">
+              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{
+    <span class="hljs-keyword">protected</span> String description;
+    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">boolean</span> isDone;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Task</span><span class="hljs-params">(String description)</span> </span>{
+        <span class="hljs-keyword">this</span>.description = description;
+        <span class="hljs-keyword">this</span>.isDone = <span class="hljs-keyword">false</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getStatusIcon</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> (isDone ? <span class="hljs-string">"\u2713"</span> : <span class="hljs-string">"\u2718"</span>); <span class="hljs-comment">//return tick or X symbols</span>
+    }
+
+    <span class="hljs-comment">//...</span>
+}
+</code></pre>
+              <pre><code class="hljs java">Task t = <span class="hljs-keyword">new</span> Taks(<span class="hljs-string">"read book"</span>);
+t.markAsDone()
+</code></pre>
+            </panel>
+          </panel>
+        </div>
+        <hr>
+        <div id="level4">
+          <p>
+            <thumbnail text=":fas-business-time:" font-color="white" add-class="float-left bg-dark mr-2 mt-2" size="80"><span aria-hidden="true" class="fas fa-business-time"></span></thumbnail>
+          </p>
+          <h3 id="level-4-todos-events-deadlines">Level 4. ToDos, Events, Deadlines<a class="fa fa-anchor" href="#level-4-todos-events-deadlines"></a></h3>
+          <p>Add support for tracking three types of tasks:
+            <br>
+            <br></p>
+          <ol>
+            <li><strong>ToDos</strong>: tasks without any date/time attached to it <span class="dimmed">e.g., <em>visit new theme park</em></span></li>
+            <li><strong>Deadlines</strong>: tasks that need to be done before a specific date/time <span class="dimmed">e.g., <em>submit report by 11/10/2019 5pm</em></span></li>
+            <li><strong>Events</strong>: tasks that start at a specific time and ends at a specific time <span class="dimmed">e.g., <em>team project meeting on 2/10/2019 2-4pm</em></span></li>
+          </ol>
+          <p>Example:</p>
+          <pre><code class="hljs">todo borrow book
+    ____________________________________________________________
+     Got it. I've added this task: 
+       [T][✗] borrow book
+     Now you have 5 tasks in the list.
+    ____________________________________________________________
+
+list
+    ____________________________________________________________
+     Here are the tasks in your list:
+     1.[T][✓] read book
+     2.[D][✗] return book (by: June 6th)
+     3.[E][✗] project meeting (at: Aug 6th 2-4pm)
+     4.[T][✓] join sports club
+     5.[T][✗] borrow book
+    ____________________________________________________________
+
+deadline return book /by Sunday
+    ____________________________________________________________
+     Got it. I've added this task: 
+       [D][✗] return book (by: Sunday)
+     Now you have 6 tasks in the list.
+    ____________________________________________________________
+
+event project meeting /at Mon 2-4pm
+    ____________________________________________________________
+     Got it. I've added this task: 
+       [E][✗] project meeting (at: Mon 2-4pm)
+     Now you have 7 tasks in the list.
+    ____________________________________________________________
+</code></pre>
+          <p>At this point, dates/times can be treated as strings; there is no need to convert them to actual dates/times.</p>
+          <p>Example:</p>
+          <pre><code class="hljs">
+deadline do homework /by no idea :-p
+    ____________________________________________________________
+     Got it. I've added this task: 
+       [D][✗] do homework (by: no idea :-p)
+     Now you have 6 tasks in the list.
+    ____________________________________________________________
+</code></pre>
+          <p>When implementing this feature, you are also recommended to implement the following extension as collections classes (e.g., <code>ArrayList</code>) have methods to easily delete an item at a specified location:</p>
+          <panel header="**Extension: `A-Inheritance`**">
+            <h3 id="a-inheritance"><span class="badge badge-pill badge-primary">A-Inheritance</span><a class="fa fa-anchor" href="#a-inheritance"></a></h3>
+            <p><strong>Use Inheritance to support multiple task types</strong></p>
+            <p>As there are multiple types of tasks that have some similarity between them, you can implement classes <code>Todo</code>, <code>Deadline</code> and <code>Event</code> classes to inherit from a <code>Task</code> class.</p>
+            <p>Furthermore, use polymorphism to store all tasks in a data structure containing <code>Task</code> objects e.g., <code>Task[100]</code>.</p>
+            <panel type="seamless" header="Partial solution" minimized="">
+              <pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Deadline</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Task</span> </span>{
+
+    <span class="hljs-keyword">protected</span> String by;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Deadline</span><span class="hljs-params">(String description, String by)</span> </span>{
+        <span class="hljs-keyword">super</span>(description);
+        <span class="hljs-keyword">this</span>.by = by;
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"[D]"</span> + <span class="hljs-keyword">super</span>.toString() + <span class="hljs-string">" (by: "</span> + by + <span class="hljs-string">")"</span>;
+    }
+}
+</code></pre>
+              <pre><code class="hljs java">Task[] tasks = <span class="hljs-keyword">new</span> Task[<span class="hljs-number">100</span>];
+task[<span class="hljs-number">0</span>] = <span class="hljs-keyword">new</span> Deadline(<span class="hljs-string">"return book"</span>, <span class="hljs-string">"Monday"</span>);
+</code></pre>
+            </panel>
+          </panel>
+        </div>
+        <hr>
+        <div id="level5">
+          <p>
+            <thumbnail text=":fas-exclamation-triangle:" font-color="white" add-class="float-left bg-dark mr-2 mt-2" size="80"><span aria-hidden="true" class="fas fa-exclamation-triangle"></span></thumbnail>
+          </p>
+          <h3 id="level-5-handle-errors">Level 5. Handle Errors<a class="fa fa-anchor" href="#level-5-handle-errors"></a></h3>
+          <p>Teach Duke to deal with errors such as incorrect inputs entered by the user.
+            <br>
+            <br></p>
+          <p>Example:</p>
+          <pre><code class="hljs">todo
+    ____________________________________________________________
+     ☹ OOPS!!! The description of a todo cannot be empty.
+    ____________________________________________________________
+
+blah
+    ____________________________________________________________
+     ☹ OOPS!!! I'm sorry, but I don't know what that means :-(
+    ____________________________________________________________
+</code></pre>
+          <p>When implementing this feature, you are also recommended to implement the following extension as collections classes (e.g., <code>ArrayList</code>) have methods to easily delete an item at a specified location:</p>
+          <panel header="**Extension: `A-Exceptions`**">
+            <h3 id="a-exceptions"><span class="badge badge-pill badge-primary">A-Exceptions</span><a class="fa fa-anchor" href="#a-exceptions"></a></h3>
+            <p><strong>Use Exceptions to handle errors</strong></p>
+            <p>Use exceptions to handle errors. For example, define a class <code>DukeException</code> to represent exceptions specific to Duke.</p>
+          </panel>
+          <ul>
+            <li><strong>Minimal</strong>: handle at least the two types of errors shown in the example above.</li>
+            <li><strong>Stretch goal</strong>: handle all possible errors in the current version. As you evolve Duke, continue to handle errors related to the new features added.</li>
+          </ul>
+        </div>
+        <hr>
+        <div id="level6">
+          <p>
+            <thumbnail text=":fas-trash-alt:" font-color="white" add-class="float-left bg-dark mr-2 mt-2" size="80"><span aria-hidden="true" class="fas fa-trash-alt"></span></thumbnail>
+          </p>
+          <h3 id="level-6-delete">Level 6. Delete<a class="fa fa-anchor" href="#level-6-delete"></a></h3>
+          <p>Add support for deleting tasks from the list.
+            <br>
+            <br></p>
+          <p>Example:</p>
+          <pre><code class="hljs">list
+    ____________________________________________________________
+     Here are the tasks in your list:
+     1.[T][✓] read book
+     2.[D][✓] return book (by: June 6th)
+     3.[E][✗] project meeting (at: Aug 6th 2-4pm)
+     4.[T][✓] join sports club
+     5.[T][✗] borrow book
+    ____________________________________________________________
+
+delete 3
+    ____________________________________________________________
+     Noted. I've removed this task: 
+       [E][✗] project meeting (at: Aug 6th 2-4pm)
+     Now you have 4 tasks in the list.
+    ____________________________________________________________
+</code></pre>
+          <p>When implementing this feature, you are also recommended to implement the following extension as collections classes (e.g., <code>ArrayList</code>) have methods to easily delete an item at a specified location:</p>
+          <panel header="**Extension: `A-Collections`**">
+            <div></div>
+            <h3 id="a-collections"><span class="badge badge-pill badge-primary">A-Collections</span><a class="fa fa-anchor" href="#a-collections"></a></h3>
+            <p><strong>Use Java Collections classes</strong></p>
+            <p>Use Java Collections classes for storing data. For example, you can use an <code>ArrayList&lt;Task&gt;</code> to store the tasks.</p>
+          </panel>
+        </div>
+        <hr>
+        <div id="level7">
+          <p>
+            <thumbnail text=":fas-save:" font-color="white" add-class="float-left bg-dark mr-2 mt-2" size="80"><span aria-hidden="true" class="fas fa-save"></span></thumbnail>
+          </p>
+          <h3 id="level-7-save">Level 7. Save<a class="fa fa-anchor" href="#level-7-save"></a></h3>
+          <p>Save the tasks in the hard disk automatically whenever the task list changes. Load the data from the hard disk whe Duke starts up. You may hard-code the file name and location <span class="dimmed">e.g., <code>[project_root]/data/duke.txt</code></span></p>
+          <p>The format of the file is up to you. Example:</p>
+          <pre><code class="hljs">T | 1 | read book
+D | 0 | return book | June 6th
+E | 0 | project meeting | Aug 6th 2-4pm
+T | 1 | join sports club
+</code></pre>
+        </div>
+        <hr>
+        <div id="level8">
+          <p>
+            <thumbnail text=":fas-clock:" font-color="white" add-class="float-left bg-dark mr-2 mt-2" size="80"><span aria-hidden="true" class="fas fa-clock"></span></thumbnail>
+          </p>
+          <h3 id="level-8-dates-and-times">Level 8. Dates and Times<a class="fa fa-anchor" href="#level-8-dates-and-times"></a></h3>
+          <p>Teach Duke to understand dates and times. For example, if the command is <code>deadline return book /by 2/12/2019 1800</code>, Duke understands <code>2/12/2019 1800</code> as <em>2nd of December 2019, 6pm</em>, instead of storing it simply as
+            a String.</p>
+          <ul>
+            <li><strong>Minimal</strong>: Store deadline dates as a <code>java.time.LocalDate</code> in your task objects. Accept dates in a format such as <code>yyyy-mm-dd</code> format (e.g., <code>2019-10-15</code>) and print in a different format such
+              as <code>MMM d yyyy</code> e.g., (<code>Oct 15 2019</code>).</li>
+            <li><strong>Stretch goal</strong>: Use dates and times in more meaningful ways. e.g., add a command to print deadlines/events occurring on a specific date.</li>
+          </ul>
+          <panel header="Using dates/times in Java" minimized="">
+            <p>A code snippet using the <code>LocalDate</code> class:</p>
+            <pre><code class="hljs java"><span class="hljs-keyword">import</span> java.time.LocalDate;
+<span class="hljs-keyword">import</span> java.time.format.DateTimeFormatter;
+<span class="hljs-keyword">import</span> java.time.temporal.ChronoUnit;
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-comment">//create dates from strings</span>
+        LocalDate d1 = LocalDate.parse(<span class="hljs-string">"2019-12-01"</span>);
+        LocalDate d2 = LocalDate.parse(<span class="hljs-string">"2019-12-02"</span>);
+        LocalDate d3 = LocalDate.parse(<span class="hljs-string">"2019-12-02"</span>);
+        
+        <span class="hljs-comment">//compare dates</span>
+        System.out.println(d1.isBefore(d2)); <span class="hljs-comment">// -&gt; true</span>
+        System.out.println(d1.isAfter(d2)); <span class="hljs-comment">// -&gt; false</span>
+        System.out.println(d2.equals(d3)); <span class="hljs-comment">// -&gt; true</span>
+        
+        <span class="hljs-comment">//work with dates</span>
+        System.out.println(d1.getDayOfWeek()); <span class="hljs-comment">// -&gt; SUNDAY</span>
+        System.out.println(d1.getMonth()); <span class="hljs-comment">// -&gt; DECEMBER</span>
+        System.out.println(d1.plus(<span class="hljs-number">1</span>, ChronoUnit.YEARS));  <span class="hljs-comment">// -&gt; 2020-12-01</span>
+        
+        <span class="hljs-comment">// get today's date and print it in a specific format</span>
+        LocalDate d4 = LocalDate.now();
+        System.out.println(d4); <span class="hljs-comment">// -&gt; 2019-10-15</span>
+        System.out.println(d4.format(DateTimeFormatter.ofPattern(<span class="hljs-string">"MMM d yyyy"</span>))); <span class="hljs-comment">// -&gt; Oct 15 2019</span>
+    }
+}
+</code></pre>
+            <ul>
+              <li><a href="https://www.baeldung.com/java-8-date-time-intro">A tutorial from https://www.baeldung.com/</a></li>
+            </ul>
+          </panel>
+        </div>
+        <hr>
+        <div id="level9">
+          <p>
+            <thumbnail text=":fas-search:" font-color="white" add-class="float-left bg-dark mr-2 mt-2" size="80"><span aria-hidden="true" class="fas fa-search"></span></thumbnail>
+          </p>
+          <h3 id="level-9-find">Level 9. Find<a class="fa fa-anchor" href="#level-9-find"></a></h3>
+          <p>Give users a way to find a task by searching for a keyword.
+            <br>
+            <br></p>
+          <p>Example:</p>
+          <pre><code class="hljs">find book
+    ____________________________________________________________
+     Here are the matching tasks in your list:
+     1.[T][✓] read book
+     2.[D][✓] return book (by: June 6th)
+    ____________________________________________________________
+</code></pre>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../markbind/js/vue.min.js"></script>
+<script src="../markbind/js/vue-strap.min.js"></script>
+<script src="../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../markbind/js/polyfill.min.js"></script>
+<script src="../markbind/js/bootstrap-vue.min.js"></script>
+<script>
+  const baseUrl = ''
+  const enableSearch = true
+</script>
+<script src="../markbind/js/setup.js"></script>
+<script src="../markbind/layouts/default/scripts.js"></script>
+
+</html>

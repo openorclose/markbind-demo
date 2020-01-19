@@ -3,12 +3,12 @@
   "pages": [
     {
       "headings": {
-        "undefined": "Landing Page Title",
-        "heading-1": "Heading 1",
-        "sub-heading-1-1": "Sub Heading 1.1",
-        "sub-heading-1-2": "Sub Heading 1.2",
-        "heading-2": "Heading 2",
-        "heading-3": "Heading 3"
+        "undefined": "MarkBind",
+        "welcome-to-markbind": "Welcome to MarkBind",
+        "real-world-examples": "Real-world examples",
+        "media-embeds": "Media Embeds",
+        "showcasing-our-boxes": "Showcasing our boxes",
+        "showcasing-our-panels-killer-feature": "Showcasing our panels (killer feature)"
       },
       "header": "header.md",
       "pageNav": 2,
@@ -19,38 +19,22 @@
       "layout": "default"
     },
     {
-      "headings": {},
+      "headings": {
+        "markbind-demo": "markbind-demo"
+      },
       "src": "README.md",
       "title": "",
       "layout": "default"
     },
     {
-      "headings": {},
-      "src": "_site/markbind/layouts/default/footer.md",
-      "title": "",
-      "layout": "default"
-    },
-    {
-      "headings": {},
-      "src": "_site/markbind/layouts/default/head.md",
-      "title": "",
-      "layout": "default"
-    },
-    {
-      "headings": {},
-      "src": "_site/markbind/layouts/default/header.md",
-      "title": "",
-      "layout": "default"
-    },
-    {
-      "headings": {},
-      "src": "_site/markbind/layouts/default/navigation.md",
-      "title": "",
-      "layout": "default"
-    },
-    {
-      "headings": {},
-      "src": "_site/markbind/layouts/default/page.md",
+      "headings": {
+        "plantuml-diagrams": "PlantUML Diagrams",
+        "usage": "Usage",
+        "example": "Example"
+      },
+      "header": "header.md",
+      "siteNav": "site-nav.md",
+      "src": "contents/PUML.md",
       "title": "",
       "layout": "default"
     },
@@ -63,18 +47,6 @@
       "title": "User Guide - PlantUML Diagrams",
       "layout": "userGuide",
       "src": "contents/fileToBeIncluded.md"
-    },
-    {
-      "headings": {
-        "plantuml-diagrams": "PlantUML Diagrams",
-        "usage": "Usage",
-        "example": "Example"
-      },
-      "header": "header.md",
-      "siteNav": "site-nav.md",
-      "src": "contents/topic1.md",
-      "title": "",
-      "layout": "default"
     },
     {
       "headings": {},
