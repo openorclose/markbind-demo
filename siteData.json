@@ -49,6 +49,24 @@
       "src": "contents/fileToBeIncluded.md"
     },
     {
+      "headings": {
+        "project-duke": "Project Duke",
+        "levels": "\n          Levels",
+        "level-1-greet-echo-exit": "Level 1. Greet, Echo, Exit",
+        "level-2-add-list": "Level 2. Add, List",
+        "level-3-mark-as-done": "Level 3. Mark as Done",
+        "level-4-todos-events-deadlines": "Level 4. ToDos, Events, Deadlines",
+        "level-5-handle-errors": "Level 5. Handle Errors",
+        "level-6-delete": "Level 6. Delete",
+        "level-7-save": "Level 7. Save",
+        "level-8-dates-and-times": "Level 8. Dates and Times",
+        "level-9-find": "Level 9. Find"
+      },
+      "src": "contents/fileToBeIncluded2.md",
+      "title": "",
+      "layout": "default"
+    },
+    {
       "headings": {},
       "header": "header.md",
       "siteNav": "site-nav.md",

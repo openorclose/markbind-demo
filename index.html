@@ -25,8 +25,8 @@
   <div id="app">
     <header>
       <navbar type="dark" class="temp-navbar">
-        <a slot="brand" href="/index.html" title="Home" class="navbar-brand">MarkBind</a>
-        <li><a href="/contents/topic1.html" class="nav-link">PUML</a></li>
+        <a slot="brand" href="/markbind-demo/index.html" title="Home" class="navbar-brand">MarkBind</a>
+        <li><a href="/markbind-demo/contents/PUML.html" class="nav-link">PUML</a></li>
         <li slot="right">
           <form class="navbar-form">
             <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right=""></searchbar>
@@ -38,8 +38,8 @@
       <nav id="site-nav" class="navbar navbar-light bg-transparent">
         <div class="border-right-grey nav-inner position-sticky slim-scroll">
           <ul class="px-0 site-nav-list">
-            <li class="mt-2"><a href="/index.html" class="site-nav__a current">Home 🏠</a></li>
-            <li class="mt-2"><a href="/contents/PUML.html" class="site-nav__a">PUML</a></li>
+            <li class="mt-2"><a href="/markbind-demo/index.html" class="site-nav__a current">Home 🏠</a></li>
+            <li class="mt-2"><a href="/markbind-demo/contents/PUML.html" class="site-nav__a">PUML</a></li>
           </ul>
         </div>
       </nav>
@@ -271,7 +271,7 @@
 <script src="markbind/js/polyfill.min.js"></script>
 <script src="markbind/js/bootstrap-vue.min.js"></script>
 <script>
-  const baseUrl = ''
+  const baseUrl = '/markbind-demo'
   const enableSearch = true
 </script>
 <script src="markbind/js/setup.js"></script>
